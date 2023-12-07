@@ -5,7 +5,6 @@ A fullstack E-commerce web App created using MERN Technology where  scrap Seller
 1. Fork the target repo to your own account.
 2. Clone the repo to your local machine.
 3. Check out a new "topic branch" and make changes.
-4. Push your topic branch to your fork.
-5. Use the diff viewer on GitHub to create a pull request via a discussion.
-Make any requested changes.
+4. commit abd Push your topic branch to your fork.
+5. Make a pull request merge back into original repo
 6. The pull request is then merged (usually into the master branch), and the topic branch is deleted from the upstream (target) repo.
