@@ -2,7 +2,13 @@ const express = require('express')
 const cors = require('cors')
 const path = require('path');
 var jwt = require('jsonwebtoken');
-const multer = require('multer')
+const multer = require('multer');
+const dotenv = require("dotenv");
+const mongoose = require("mongoose")
+
+
+dotenv.config();
+
 const productController = require('./controllers/productController');
 const userController = require('./controllers/userController');
 
@@ -26,10 +32,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 
 const port = process.env.PORT || 4000;
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017')
+mongoose
+    .connect(process.env.MONGO_URL, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    })
+    .then(console.log("Connected to MongoDB"))
+    .catch((err) => console.log("NOT CONNECTED TO NETWORK", err))
 
-app.get('/', (req, res) => {
+    app.get('/', (req, res) => {
     res.send('hello...')
 })
 
