@@ -31,7 +31,7 @@ module.exports.signup = (req, res) => {
     const user = new Users({ username: username, password: password, email, mobile });
     user.save()
         .then(() => {
-            res.send({ message: 'saved success.' })
+            res.send({ message: 'You signup successfully' })
         })
         .catch(() => {
             res.send({ message: 'server err' })
