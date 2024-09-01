@@ -27,6 +27,21 @@ function Header(props) {
             "longitude": 72.8777,
             "placeName": "Mumbai, Maharashtra"
         },
+        {
+            "latitude": 19.0760,
+            "longitude": 72.8777,
+            "placeName": "Patna, Bihar"
+        },
+        {
+            "latitude": 19.0760,
+            "longitude": 72.8777,
+            "placeName": "Gurugram, Haryana"
+        },
+        {
+            "latitude": 19.0760,
+            "longitude": 72.8777,
+            "placeName": "Noida, UP"
+        },
     ]
 
     return (
@@ -80,7 +95,7 @@ function Header(props) {
                         color: '#fff',
                         fontSize: '14px',
                         borderRadius: '50%'
-                    }} >  N </div>
+                    }} >  </div>
 
                 {showOver && <div style={{
                     minHeight: '100px',
