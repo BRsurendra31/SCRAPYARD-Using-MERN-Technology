@@ -22,7 +22,7 @@ function ProductDetail() {
             .catch((err) => {
                 alert('Server Err.')
             })
-    }, [])
+    }, [p.productId])
 
 
     const handleContact = (addedBy) => {

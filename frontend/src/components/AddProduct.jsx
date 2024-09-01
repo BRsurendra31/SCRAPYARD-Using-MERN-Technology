@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "./Header";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import axios from "axios";
 import categories from "./CategoriesList";
 import API_URL from "../constants";
@@ -20,7 +20,7 @@ function AddProduct() {
         if (!localStorage.getItem('token')) {
             navigate('/login')
         }
-    }, [])
+    }, [navigate])
 
     const handleApi = () => {
 
