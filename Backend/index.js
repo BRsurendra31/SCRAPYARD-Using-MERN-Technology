@@ -26,7 +26,9 @@ const upload = multer({ storage: storage })
 const bodyParser = require('body-parser')
 const app = express()
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-app.use(cors());
+app.use(cors({
+    origin: 'https://scrapyard-using-mern-technology-frontend.onrender.com' // replace with your frontend URL
+}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
